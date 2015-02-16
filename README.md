@@ -27,3 +27,15 @@ This folder contains all of the OS-wide library files.  It may be split into a C
 
 ### docs Folder
 This is the root folder for all documentation for the project.  It will include any system API documentation as well as user manuals, etc.
+
+## Build Environment
+I'm using Xubuntu as my development operating system for now.  Eventually, development should transition into BFOS.  You'll need to setup a cross-compiler (see instructions at: http://wiki.osdev.org/GCC_Cross-Compiler).  The components I used to build my compiler are:
+- binutils 2.25
+- gcc 4.9.2
+  - cloog 0.18.1
+  - gmp 4.3.2
+  - isl 0.12.2
+  - mpc 0.8.1
+  - mpfr 2.4.2
+ 
+The GCC infrastructure components can be downloaded from ftp://gcc.gnu.org/pub/gcc/infrastructure.
