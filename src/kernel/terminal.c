@@ -88,4 +88,5 @@ void terminal_writestring(const char* data)
 
 void terminal_scroll()
 {
+
 }
