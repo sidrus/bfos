@@ -3,7 +3,7 @@
 #endif
 #include <stddef.h>
 #include <stdint.h>
-#include "terminal.h"
+#include "stdio.h"
 
 /* Check if the compiler thinks if we are targeting the wrong operating system. */
 #if defined(__linux__)
@@ -21,8 +21,6 @@ extern "C" /* Use C linkage for kernel_main. */
 void kernel_main()
 {
 	terminal_initialize();
-	terminal_writestring("Hello, kernel World!\nThis should be on a new line");
-	for(int i=0; i<24; i++)
-        terminal_writestring("\n");
-    terminal_writestring("This should be somewhere near the top");
+	println("Hello, kernel World!\nThis should be on a new line");
+    print("This should be somewhere near the top");
 }
